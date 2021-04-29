@@ -17,6 +17,7 @@ ssh-keygen -t rsa -P ""
 Copy the contents of .ssh/id_rsa.pub (of master) to .ssh/authorized_keys (of all 4 nodes)
 
 ##### In the Master Node:
+```bash
 cp spark/conf/spark-env.sh.template spark/conf/spark-env.sh
 cp spark/conf/spark-defaults.conf.template spark/conf/spark-defaults.conf
 cp spark/conf/workers.template spark/conf/workers
@@ -33,7 +34,7 @@ nano conf/spark-defaults.conf
 nano conf/workers
 &nbsp;&nbsp;&nbsp;&nbsp;(Enter local IP of each Worker Node on a newline)
 &nbsp;&nbsp;&nbsp;&nbsp;(Save and Exit)
-
+```
 ### To Start and Run Spark
 #### In Master Node:
 cd spark
