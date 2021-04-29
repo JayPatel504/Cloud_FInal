@@ -1,6 +1,6 @@
 # Cloud_Final
 
-To create Spark Cluster:
+To create Spark Cluster:\n
 Create 4 EC2 instances
 
 In each instance, run the following:
