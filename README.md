@@ -4,12 +4,12 @@
 ##### Create 4 EC2 instances<
 
 ##### In each instance, run the following:
-sudo apt update -y && sudo apt upgrade -y
-sudo apt install -y default-jre default-jdk python3-pip
-wget https://apache.claz.org/spark/spark-3.1.1/spark-3.1.1-bin-hadoop3.2.tgz
-tar -xvzf spark-3.1.1-bin-hadoop3.2.tgz
-mv spark-3.1.1-bin-hadoop3.2 spark
-pip3 install numpy
+sudo apt update -y && sudo apt upgrade -y  
+sudo apt install -y default-jre default-jdk python3-pip  
+wget https://apache.claz.org/spark/spark-3.1.1/spark-3.1.1-bin-hadoop3.2.tgz  
+tar -xvzf spark-3.1.1-bin-hadoop3.2.tgz  
+mv spark-3.1.1-bin-hadoop3.2 spark  
+pip3 install numpy  
 
 ##### In the Master Node, run the following:
 ssh-keygen -t rsa -P ""
@@ -48,22 +48,3 @@ cd spark
 bin/spark-submit test.py <CSV> <Path to Saved Model>
 
 ### To Test Model with Docker
-
-## Creating the Dockerfile
-
-Install [Docker on your Ubuntu vm](https://docs.docker.com/engine/install/debian/)
-
-### Running into the "no more space on this device error"
-
-Try the following commands:
-```bash
-sudo mkdir -p /etc/sysconfig/
-printf "DOCKER_STORAGE_OPTIONS= - -storage-opt dm.basesize=10G" > /etc/sysconfig/docker-storage-setup
-sudo systemctl restart docker
-```
-
-And to build your docker image: try doing the following:
-```bash
-sudo docker system prune -f && sudo docker build -t testinggggg . && sudo docker system prune -f
-```
-The pruning prevents dangling containers from existing.
