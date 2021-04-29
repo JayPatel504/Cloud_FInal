@@ -18,22 +18,22 @@ Copy the contents of .ssh/id_rsa.pub (of master) to .ssh/authorized_keys (of all
 
 ##### In the Master Node:
 
-cp spark/conf/spark-env.sh.template spark/conf/spark-env.sh
-cp spark/conf/spark-defaults.conf.template spark/conf/spark-defaults.conf
-cp spark/conf/workers.template spark/conf/workers
-cd spark
-nano conf/spark-env.sh
-&nbsp;&nbsp;&nbsp;&nbsp;(Add this line anywhere in the file)
-&nbsp;&nbsp;&nbsp;&nbsp;JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-&nbsp;&nbsp;&nbsp;&nbsp;(Save and Exit)
-nano conf/spark-defaults.conf
-&nbsp;&nbsp;&nbsp;&nbsp;(Delete the # in front of spark.master & spark.eventLog.enabled
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Replace master in <spark://master:7077> with local IP of Master Node
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Replace true to false next to <spark.eventLog.enabled>)
-&nbsp;&nbsp;&nbsp;&nbsp;(Save and Exit)
-nano conf/workers
-&nbsp;&nbsp;&nbsp;&nbsp;(Enter local IP of each Worker Node on a newline)
-&nbsp;&nbsp;&nbsp;&nbsp;(Save and Exit)
+cp spark/conf/spark-env.sh.template spark/conf/spark-env.sh  
+cp spark/conf/spark-defaults.conf.template spark/conf/spark-defaults.conf  
+cp spark/conf/workers.template spark/conf/workers  
+cd spark  
+nano conf/spark-env.sh  
+&nbsp;&nbsp;&nbsp;&nbsp;(Add this line anywhere in the file)  
+&nbsp;&nbsp;&nbsp;&nbsp;JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64  
+&nbsp;&nbsp;&nbsp;&nbsp;(Save and Exit)  
+nano conf/spark-defaults.conf  
+&nbsp;&nbsp;&nbsp;&nbsp;(Delete the # in front of spark.master & spark.eventLog.enabled  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Replace master in <spark://master:7077> with local IP of Master Node  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Replace true to false next to <spark.eventLog.enabled>)  
+&nbsp;&nbsp;&nbsp;&nbsp;(Save and Exit)  
+nano conf/workers  
+&nbsp;&nbsp;&nbsp;&nbsp;(Enter local IP of each Worker Node on a newline)  
+&nbsp;&nbsp;&nbsp;&nbsp;(Save and Exit)  
 
 ### To Start and Run Spark
 #### In Master Node:
