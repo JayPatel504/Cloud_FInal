@@ -16,7 +16,12 @@ pip3 install numpy
 ##### In the Master Node, run the following:
 ssh-keygen -t rsa -P ""
 
-Copy the contents of .ssh/id_rsa.pub (of master) to .ssh/authorized_keys (of all 4 nodes)
+Copy the contents of .ssh/id_rsa.pub (of master) to .ssh/authorized_keys (of all 4 nodes)  
+You can do this by running:  
+```bash
+cat .ssh/id_rsa.pub
+```  
+and copying the output. Then you just paste into the authorized_keys file.  
 
 #### In the Master Node:
 cp spark/conf/spark-env.sh.template spark/conf/spark-env.sh  
