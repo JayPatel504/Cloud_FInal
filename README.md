@@ -63,6 +63,6 @@ The easiest solution to this is to save the folder in HDFS.
 Follow the instructions at this link to install Docker: https://docs.docker.com/engine/install/ubuntu/  
 Run:  
 sudo docker pull jhp54/cloud  
-sudo docker run -it -v \`pwd\`:/Cloud_Final/ jhp54/cloud python3 test.py \<CSV\> Saved_Model/  
+sudo docker run -it -v \`pwd\`:/Cloud_Final/temp jhp54/cloud python3 test.py temp/\<CSV\> Saved_Model/  
   
 You need to be in the directory as the data set for the above command to work.
