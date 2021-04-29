@@ -51,5 +51,4 @@ Follow the instructions at this link to install Docker: https://docs.docker.com/
 Run:  
 sudo docker pull jhp54/cloud  
 sudo docker run -it jhp54/cloud  
-python3 test.py \<CSV\> \<Path to Save Model\>  
-
+python3 test.py \<CSV\> Saved_Model/
