@@ -47,3 +47,5 @@ cd spark
 bin/spark-submit test.py \<CSV\> \<Path to Saved Model\>  
 
 ### To Test Model with Docker
+Follow the instructions at this link to install Docker: https://docs.docker.com/engine/install/ubuntu/  
+
