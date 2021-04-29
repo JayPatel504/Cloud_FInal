@@ -48,10 +48,12 @@ sbin/stop-all.sh
 cd spark  
 bin/spark-submit test.py \<CSV\> \<Path to Saved Model\>  
 ~ If you saved to a local path, you will need to combine all of the files found in the saved model path to a single node.  
-You can do this by using  
+You can do this by using:  
 ```bash
 rsync -a username@remote_host:/home/username/dir1 place_to_sync_on_local_machine
 ```  
+For example: you will need to combine the contents of the folder metadata.  
+The easiest solution to this is to save the folder in HDFS.  
 ### To Test Model with Docker
 Follow the instructions at this link to install Docker: https://docs.docker.com/engine/install/ubuntu/  
 Run:  
