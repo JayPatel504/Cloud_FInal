@@ -36,14 +36,14 @@ nano conf/workers
 
 ### To Start and Run Spark
 #### In Master Node:
-cd spark
-sbin/start-all.sh
-bin/spark-submit train.py <CSV> <Path to Save Model>
-sbin/stop-all.sh
+cd spark  
+sbin/start-all.sh  
+bin/spark-submit train.py <CSV> <Path to Save Model>  
+sbin/stop-all.sh  
 
 ### To Test Model without Docker
 #### In Node with Saved Model and Test Data Set:
-cd spark
-bin/spark-submit test.py <CSV> <Path to Saved Model>
+cd spark  
+bin/spark-submit test.py <CSV> <Path to Saved Model>  
 
 ### To Test Model with Docker
