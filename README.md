@@ -38,7 +38,7 @@ nano conf/workers
 #### In Master Node:
 cd spark  
 sbin/start-all.sh  
-bin/spark-submit train.py '<CSV> <Path to Save Model>'  
+bin/spark-submit train.py \<CSV> <Path to Save Model>  
 sbin/stop-all.sh  
 
 ### To Test Model without Docker
