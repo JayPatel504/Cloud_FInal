@@ -65,3 +65,5 @@ Run:
 sudo docker pull jhp54/cloud  
 sudo docker run -it jhp54/cloud  
 python3 test.py \<CSV\> Saved_Model/
+  
+You may need to install wget to download any external data sets in the container
