@@ -22,7 +22,7 @@ cp spark/conf/spark-defaults.conf.template spark/conf/spark-defaults.conf<br/>
 cp spark/conf/workers.template spark/conf/workers<br/>
 cd spark<br/>
 nano conf/spark-env.sh<br/>
-  (Add this line anywhere in the file)<t/><br/>
+  (Add this line anywhere in the file)<tab/><br/>
   JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64<br/>
   (Save and Exit)<br/>
 nano conf/spark-defaults.conf<br/>
