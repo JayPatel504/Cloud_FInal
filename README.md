@@ -1,7 +1,7 @@
 # Cloud_Final
 
-##### To create Spark Cluster:
-##### Create 4 EC2 instances<
+#### To create Spark Cluster:
+#### Create 4 EC2 instances<
 
 ##### In each instance, run the following:
 sudo apt update -y && sudo apt upgrade -y  
@@ -16,8 +16,7 @@ ssh-keygen -t rsa -P ""
 
 Copy the contents of .ssh/id_rsa.pub (of master) to .ssh/authorized_keys (of all 4 nodes)
 
-##### In the Master Node:  
-
+#### In the Master Node:
 cp spark/conf/spark-env.sh.template spark/conf/spark-env.sh  
 cp spark/conf/spark-defaults.conf.template spark/conf/spark-defaults.conf  
 cp spark/conf/workers.template spark/conf/workers  
