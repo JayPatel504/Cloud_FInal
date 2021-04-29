@@ -48,4 +48,8 @@ bin/spark-submit test.py \<CSV\> \<Path to Saved Model\>
 
 ### To Test Model with Docker
 Follow the instructions at this link to install Docker: https://docs.docker.com/engine/install/ubuntu/  
+Run:  
+sudo docker pull jhp54/cloud  
+sudo docker run -it jhp54/cloud  
+python3 test.py \<CSV\> \<Path to Save Model\>  
 
