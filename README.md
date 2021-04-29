@@ -1,7 +1,9 @@
 # Cloud_Final
 
 #### To create Spark Cluster:
-#### Create 4 EC2 instances
+#### Create 4 EC2 instances  
+Use Ubuntu 20.04  
+Set up appropiate security group and IAM roles  
 
 ##### In each instance, run the following:
 sudo apt update -y && sudo apt upgrade -y  
