@@ -5,7 +5,7 @@
 Use Ubuntu 20.04  
 Set up appropiate security group and IAM roles  
 
-##### In each instance, run the following:
+#### In each instance, run the following:
 sudo apt update -y && sudo apt upgrade -y  
 sudo apt install -y default-jre default-jdk python3-pip  
 wget https://apache.claz.org/spark/spark-3.1.1/spark-3.1.1-bin-hadoop3.2.tgz  
@@ -47,7 +47,11 @@ sbin/stop-all.sh
 #### In Node with Saved Model and Test Data Set:
 cd spark  
 bin/spark-submit test.py \<CSV\> \<Path to Saved Model\>  
-
+~ If you saved to a local path, you will need to combine all of the files found in the saved model path to a single node.  
+You can do this by using  
+```bash
+rsync -a username@remote_host:/home/username/dir1 place_to_sync_on_local_machine
+```  
 ### To Test Model with Docker
 Follow the instructions at this link to install Docker: https://docs.docker.com/engine/install/ubuntu/  
 Run:  
